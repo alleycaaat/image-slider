@@ -73,7 +73,7 @@ const App = () => {
       imageSlide.removeEventListener('transitionstart', startmoving);
       window.removeEventListener('resize', resize);
     };
-  }, []);
+  }, []); // eslint-disable-line
 
   //if slides aren't moving, set the movespeed to 1s
   //and moving to false, so the arrow buttons will work
@@ -85,7 +85,7 @@ const App = () => {
         moving: false
       });
     }
-  }, [movespeed]);
+  }, [movespeed]); // eslint-disable-line
 
   const slidemoving = () => {
     setState({
