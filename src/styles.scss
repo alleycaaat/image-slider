@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+    //border: 1px solid red;
+}
+a,
+button {
+    cursor: pointer;
+}
+.sr-only {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+}
+#container {
+    /*container is relative as content will be absolute*/
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    white-space: nowrap;
+    button {
+        position: absolute;
+        z-index: 100;
+        left: 35%;
+        top: 50%;
+        background-color: #FFF;
+        border: none;
+        color: #545454 !important;
+        font-size: 21px;
+        padding: 11px;
+    }
+    button:hover {
+        color: #222;
+    }
+    .down-button {
+        /*move down button left the full width of the element*/
+        transform: translateX(-100%);
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        z-index: 999;
+    }
+    .up-button {
+        /*move up button up the page the full height of the element*/
+        transform: translateY(-100%);
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
+#right {
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    left: 35%;
+    width: 65%;
+    .slide {
+        height: 100%;
+        width: 100%;
+        //width: 600px;
+        display: block;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+#left {
+    white-space: normal !important;
+    //position: absolute;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    width: 35%;
+    a {
+        color: #fff;
+    }
+    a:hover {
+        color: #383838;
+    }
+    .info {
+        height: 100%;
+        width: 100%;
+        color: white;
+        padding: 5px;
+        display: block;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        h1 {
+            margin-top: 15vh;
+            margin-bottom: 11px;
+            >a {
+                font-size: 4.7vh;
+            }
+        }
+
+        p {
+            margin-bottom: 7px;
+        }
+        p,
+        p>a {
+            vertical-align: middle;
+            font-size: 3vh;
+            text-decoration: none;
+        }
+        span,
+        span>p {
+            font-size: 2.7vh;
+            vertical-align: middle;
+            p {
+                display: inline;
+                margin-left: 3px;
+            }
+        }
+    }
+}
